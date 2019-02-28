@@ -94,18 +94,17 @@
 
 
 
-  <meta name="description" content="constexpr2, std::initializer_list3, 统一初始化 NewClass var{“aaa?”, 3…};4, 类型推导：auto,为了简化表示 如auto someStrangeCallableType = boost::bind(&amp;amp;SomeFunction, _2, _1, someObject);5, decltype类型推导，双层括号表引用    int">
-<meta name="keywords" content="C++11">
+  <meta name="description" content="c++ 11 知识点总结1，constexpr 作用于函数声明，编译期推导返回常量2，std::initializer_list1234567class SequenceClass&amp;#123; 	public:	SequenceClass(std::initializer_list&amp;lt;int&amp;gt; list);&amp;#125;;//这将允许SequenceClass由一连串的整数构造，就像：Se">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++11 知识点总结">
+<meta property="og:title" content="c++ 11知识点总结">
 <meta property="og:url" content="http://yoursite.com/2019/02/23/c++11知识点总结/index.html">
 <meta property="og:site_name" content="Spookyy的博客">
-<meta property="og:description" content="constexpr2, std::initializer_list3, 统一初始化 NewClass var{“aaa?”, 3…};4, 类型推导：auto,为了简化表示 如auto someStrangeCallableType = boost::bind(&amp;amp;SomeFunction, _2, _1, someObject);5, decltype类型推导，双层括号表引用    int">
+<meta property="og:description" content="c++ 11 知识点总结1，constexpr 作用于函数声明，编译期推导返回常量2，std::initializer_list1234567class SequenceClass&amp;#123; 	public:	SequenceClass(std::initializer_list&amp;lt;int&amp;gt; list);&amp;#125;;//这将允许SequenceClass由一连串的整数构造，就像：Se">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-22T18:44:27.248Z">
+<meta property="og:updated_time" content="2019-02-28T12:46:10.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++11 知识点总结">
-<meta name="twitter:description" content="constexpr2, std::initializer_list3, 统一初始化 NewClass var{“aaa?”, 3…};4, 类型推导：auto,为了简化表示 如auto someStrangeCallableType = boost::bind(&amp;amp;SomeFunction, _2, _1, someObject);5, decltype类型推导，双层括号表引用    int">
+<meta name="twitter:title" content="c++ 11知识点总结">
+<meta name="twitter:description" content="c++ 11 知识点总结1，constexpr 作用于函数声明，编译期推导返回常量2，std::initializer_list1234567class SequenceClass&amp;#123; 	public:	SequenceClass(std::initializer_list&amp;lt;int&amp;gt; list);&amp;#125;;//这将允许SequenceClass由一连串的整数构造，就像：Se">
 
 
 
@@ -122,7 +121,7 @@
   };
 </script>
 
-  <title>C++11 知识点总结 | Spookyy的博客</title>
+  <title>c++ 11知识点总结 | Spookyy的博客</title>
   
 
 
@@ -277,7 +276,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags                     //标签"></i> <br>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags                     //标签"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
         
@@ -403,7 +402,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C++11 知识点总结
+          <h1 class="post-title" itemprop="name headline">c++ 11知识点总结
 
               
             
@@ -429,34 +428,28 @@
                 
               
 
-              <time title="创建时间：2019-02-23 00:38:36 / 修改时间：02:44:27" itemprop="dateCreated datePublished" datetime="2019-02-23T00:38:36+08:00">2019-02-23</time>
+              <time title="创建时间：2019-02-23 02:42:29" itemprop="dateCreated datePublished" datetime="2019-02-23T02:42:29+08:00">2019-02-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-28 20:46:10" itemprop="dateModified" datetime="2019-02-28T20:46:10+08:00">2019-02-28</time>
               
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -486,7 +479,43 @@
       
 
       
-        <h2 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h2><p>2, std::initializer_list<t><br>3, 统一初始化 NewClass var{“aaa?”, 3…};<br>4, 类型推导：auto,为了简化表示 如auto someStrangeCallableType = boost::bind(&amp;SomeFunction, _2, _1, someObject);<br>5, decltype类型推导，双层括号表引用<br>    int <em>ptrTempA = &tempA;<br>    ecltype(</em>ptrTempA) dclTempB; /解引用，必须初始化，故编译不过<br>    decltype和auto都可以用来推断类型，但是二者有几处明显的差异：<br>        1.auto忽略顶层const，decltype保留顶层const；<br>        2.对引用操作，auto推断出原有类型，decltype推断出引用；<br>        3.对解引用操作，auto推断出原有类型，decltype推断出引用；<br>        4.auto推断时会实际执行，decltype不会执行，只做分析。总之在使用中过程中和const、引用和指针结合时需要特别小心。<br>6, 仿函数就是写个类，然后重载operator()<br>7, lambda函数是为了解决临时的谓词函数，语法：<br>    [capture list] (params list) mutable exception-&gt; return type { function body }<br>8，    [] // 沒有定义任何变量。使用未定义变量会导致错误。<br>    [x, &amp;y] // x 以传值方式传入(前提)，y 以传引用方式传入。<br>    [&amp;] // 任何被使用到的外部变量皆隐式地以引用方式加以引用。<br>    [=] // 任何被使用到的外部变量皆隐式地以传值方式加以引用。<br>    [&amp;, x] // x 显示地以传值方式加以引用。其余变量以引用方式加以引用。<br>    [=, &amp;z] // z 显示地以引用方式加以引用。其余变量以传值方式加以引用<br>9, 仿函数(functor)，是通过重载()运算符模拟函数形为的类<br>10, explicit 单个参数的构造函数不能进行隐式转换 A a = 5;<br>11, overlode 重载：<br>    同一类中同名不同参<br>    override 覆盖：<br>    多态，virtual 同名同参<br>    overwrite 隐藏，重写：<br>    父子类，1)基类virtual ,子类同名不同参<br>            2）基类不virtual, 同名同参<br>    调用依赖指针类型<br>12, 空指针类型nullptr取代NULL<br>13, enum class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）<br>14, &gt;&gt; 模板函数中可连写（必须带()以示区分，否则报错）<br>15, 类模板是用来产生模板类的 class template -&gt; template , template class -&gt; class<br>15, using 当作 typedef 来处理一般类型和类模板的别名<br>16, 变长参数模板<br>17, 新的字符串<br>18, 用户自定义的字面值<br>19, 多任务的支持：一、多个线程在一个进程中共存的内存模型；二、为线程之间的交互提供支持<br>20，default:显式让系统为默认构造函数、析构函数、拷贝构造函数以及拷贝赋值运算符提供函数体<br>    delete:禁止编译器自动产生某些函数<br>21，void f(int i);<br>    template<class t> void f(T) = delete;<br>    除了参数为int之外，都不行<br>22，long long int==至少64bit<br>23，允许sizeof操作符作用在类型的数据成员上，无须明确的对象<br>24，线程相关：std::thread std::thread::join std::mutex std::recursive_mutex std::condition_variable std::condtion_variable_any std::async std::future<br>25, tuple和erlang中的tuple类似<br>26，share_ptr weak_ptr<br>27, 随机数生成：三种算法，n种分布<br>28，std::ref针对std::bind，std::bind本质是一个函数模板，生成一个函数。而bind采用的是值传递，为了改成引用传递，需要std::ref，面std::cref是包装const引用的值</class></t></p>
+        <h2 id="c-11-知识点总结"><a href="#c-11-知识点总结" class="headerlink" title="c++ 11 知识点总结"></a>c++ 11 知识点总结</h2><h3 id="1，constexpr-作用于函数声明，编译期推导返回常量"><a href="#1，constexpr-作用于函数声明，编译期推导返回常量" class="headerlink" title="1，constexpr 作用于函数声明，编译期推导返回常量"></a>1，constexpr 作用于函数声明，编译期推导返回常量</h3><h3 id="2，std-initializer-list"><a href="#2，std-initializer-list" class="headerlink" title="2，std::initializer_list"></a>2，std::initializer_list<t></t></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class SequenceClass</span><br><span class="line">&#123; </span><br><span class="line">	public:</span><br><span class="line">	SequenceClass(std::initializer_list&lt;int&gt; list);</span><br><span class="line">&#125;;</span><br><span class="line">//这将允许SequenceClass由一连串的整数构造，就像：</span><br><span class="line">SequenceClass someVar = &#123;1, 4, 5, 6&#125;;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="3，统一初始化"><a href="#3，统一初始化" class="headerlink" title="3，统一初始化"></a>3，统一初始化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NewClass var&#123;<span class="string">"aaa?"</span>, 3...&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="4，类型推导：auto-为了简化表示-如"><a href="#4，类型推导：auto-为了简化表示-如" class="headerlink" title="4，类型推导：auto,为了简化表示 如:"></a>4，类型推导：auto,为了简化表示 如:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auto someStrangeCallableType = boost::<span class="built_in">bind</span>(&amp;SomeFunction, _2, _1, someObject)</span><br></pre></td></tr></table></figure>
+<h3 id="5，decltype类型推导，双层括号表引用"><a href="#5，decltype类型推导，双层括号表引用" class="headerlink" title="5，decltype类型推导，双层括号表引用"></a>5，decltype类型推导，双层括号表引用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int *ptrTempA = &amp;tempA;</span><br><span class="line">decltype(*ptrTempA) dclTempB; /解引用，必须初始化，故编译不过</span><br></pre></td></tr></table></figure>
+<pre><code>decltype和auto都可以用来推断类型，但是二者有几处明显的差异：
+    1.auto忽略顶层const，decltype保留顶层const；
+    2.对引用操作，auto推断出原有类型，decltype推断出引用；
+    3.对解引用操作，auto推断出原有类型，decltype推断出引用；
+    4.auto推断时会实际执行，decltype不会执行，只做分析。总之在使用中过程中和const、引用和指针结合时需要特别小心。
+</code></pre><h3 id="6，仿函数就是写个类，然后重载operator-，通过重载-运算符模拟函数形式的类"><a href="#6，仿函数就是写个类，然后重载operator-，通过重载-运算符模拟函数形式的类" class="headerlink" title="6，仿函数就是写个类，然后重载operator()，通过重载()运算符模拟函数形式的类"></a>6，仿函数就是写个类，然后重载operator()，通过重载()运算符模拟函数形式的类</h3><h3 id="7，lambda函数是为了简化表示临时的谓词函数，语法："><a href="#7，lambda函数是为了简化表示临时的谓词函数，语法：" class="headerlink" title="7，lambda函数是为了简化表示临时的谓词函数，语法："></a>7，lambda函数是为了简化表示临时的谓词函数，语法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[capture list] (params list) mutable exception-&gt; <span class="built_in">return</span> <span class="built_in">type</span> &#123; <span class="keyword">function</span> body &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="捕捉列表参数意义"><a href="#捕捉列表参数意义" class="headerlink" title="捕捉列表参数意义"></a>捕捉列表参数意义</h4><pre><code>[] // 沒有定义任何变量。使用未定义变量会导致错误。
+[x, &amp;y] // x 以传值方式传入(前提)，y 以传引用方式传入。
+[&amp;] // 任何被使用到的外部变量皆隐式地以引用方式加以引用。
+[=] // 任何被使用到的外部变量皆隐式地以传值方式加以引用。
+[&amp;, x] // x 显示地以传值方式加以引用。其余变量以引用方式加以引用。
+[=, &amp;z] // z 显示地以引用方式加以引用。其余变量以传值方式加以引用
+</code></pre><h3 id="8，explicit-单个参数的构造函数不能进行隐式转换-A-a-5"><a href="#8，explicit-单个参数的构造函数不能进行隐式转换-A-a-5" class="headerlink" title="8，explicit 单个参数的构造函数不能进行隐式转换 A a = 5;"></a>8，explicit 单个参数的构造函数不能进行隐式转换 A a = 5;</h3><h3 id="9，overload-override-overwrite区别"><a href="#9，overload-override-overwrite区别" class="headerlink" title="9，overload override overwrite区别"></a>9，overload override overwrite区别</h3><pre><code>1.overlode 重载：
+同一类中同名不同参
+2.override 覆盖：
+多态，virtual 同名同参
+3.overwrite 隐藏，重写：
+父子类， 1)基类virtual ,子类同名不同参
+        2)基类不virtual, 同名同参
+调用哪个函数依赖指针类型
+</code></pre><h3 id="10，空指针类型nullptr取代NULL"><a href="#10，空指针类型nullptr取代NULL" class="headerlink" title="10，空指针类型nullptr取代NULL"></a>10，空指针类型nullptr取代NULL</h3><h3 id="11，enum-class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）"><a href="#11，enum-class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）" class="headerlink" title="11，enum class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）"></a>11，enum class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）</h3><h3 id="12，-gt-gt-模板函数中可连写（必须带-以示区分，否则报错）"><a href="#12，-gt-gt-模板函数中可连写（必须带-以示区分，否则报错）" class="headerlink" title="12，&gt;&gt; 模板函数中可连写（必须带()以示区分，否则报错）"></a>12，&gt;&gt; 模板函数中可连写（必须带()以示区分，否则报错）</h3><h3 id="13，类模板是用来产生模板类的-class-template-gt-template-template-class-gt-class"><a href="#13，类模板是用来产生模板类的-class-template-gt-template-template-class-gt-class" class="headerlink" title="13，类模板是用来产生模板类的 class template -&gt; template , template class -&gt; class"></a>13，类模板是用来产生模板类的 class template -&gt; template , template class -&gt; class</h3><h3 id="14，using-当作-typedef-来处理一般类型和类模板的别名"><a href="#14，using-当作-typedef-来处理一般类型和类模板的别名" class="headerlink" title="14，using 当作 typedef 来处理一般类型和类模板的别名"></a>14，using 当作 typedef 来处理一般类型和类模板的别名</h3><h3 id="15，变长参数模板"><a href="#15，变长参数模板" class="headerlink" title="15，变长参数模板"></a>15，变长参数模板</h3><h3 id="16，新的字符串"><a href="#16，新的字符串" class="headerlink" title="16，新的字符串"></a>16，新的字符串</h3><h3 id="17，用户自定义的字面值"><a href="#17，用户自定义的字面值" class="headerlink" title="17，用户自定义的字面值"></a>17，用户自定义的字面值</h3><h3 id="18，多任务的支持："><a href="#18，多任务的支持：" class="headerlink" title="18，多任务的支持："></a>18，多任务的支持：</h3><pre><code>1.多个线程在一个进程中共存的内存模型；
+2.为线程之间的交互提供支持
+</code></pre><h3 id="19，default-delete"><a href="#19，default-delete" class="headerlink" title="19，default delete"></a>19，default delete</h3><pre><code>    default:显式让系统为默认构造函数、析构函数、拷贝构造函数以及拷贝赋值运算符提供函数体
+    delete:禁止编译器自动产生某些函数，并不限于构造和析构函数，
+示例：
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void f(int i);</span><br><span class="line">template&lt;class T&gt; void f(T) = delete;</span><br></pre></td></tr></table></figure>
+<pre><code>除了参数为int之外的函数外，都不允许
+</code></pre><h3 id="20，long-long-int，表示至少64bit的数"><a href="#20，long-long-int，表示至少64bit的数" class="headerlink" title="20，long long int，表示至少64bit的数"></a>20，long long int，表示至少64bit的数</h3><h3 id="21，允许sizeof操作符作用在类型的数据成员上，无须明确对象"><a href="#21，允许sizeof操作符作用在类型的数据成员上，无须明确对象" class="headerlink" title="21，允许sizeof操作符作用在类型的数据成员上，无须明确对象"></a>21，允许sizeof操作符作用在类型的数据成员上，无须明确对象</h3><h3 id="22，线程相关："><a href="#22，线程相关：" class="headerlink" title="22，线程相关："></a>22，线程相关：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::thread std::thread::join std::mutex std::recursive_mutex std::condition_variable std::condtion_variable_any std::async std::future</span><br></pre></td></tr></table></figure>
+<h3 id="23，tuple和erlang中的tuple类似"><a href="#23，tuple和erlang中的tuple类似" class="headerlink" title="23，tuple和erlang中的tuple类似"></a>23，tuple和erlang中的tuple类似</h3><h3 id="24，share-ptr-weak-ptr"><a href="#24，share-ptr-weak-ptr" class="headerlink" title="24，share_ptr weak_ptr"></a>24，share_ptr weak_ptr</h3><h3 id="25，随机数生成：三种算法，n种分布"><a href="#25，随机数生成：三种算法，n种分布" class="headerlink" title="25，随机数生成：三种算法，n种分布"></a>25，随机数生成：三种算法，n种分布</h3><h3 id="26，std-ref和std-cref"><a href="#26，std-ref和std-cref" class="headerlink" title="26，std::ref和std::cref"></a>26，std::ref和std::cref</h3><pre><code>1. std::cref是包装const引用的值
+2.针对std::bind，std::bind本质是一个函数模板，生成一个函数。而bind采用的是值传递，为了改成引用传递，需要std::returnf，面
+3.thread也是，即使函数被声明成引用，也会以值传递的形式生成拷贝，默认将对象拷贝到线程空间。如果希望原始对象改变，则使用std::ref
+</code></pre><p>关于std::bind等，参考<a href="https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">C++ 参考手册</a></p>
 
       
     </div>
@@ -535,12 +564,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/C-11/" rel="tag"># C++11</a>
-          
-        </div>
       
 
       
@@ -663,9 +686,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -727,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#constexpr"><span class="nav-number">1.</span> <span class="nav-text">constexpr</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#c-11-知识点总结"><span class="nav-number">1.</span> <span class="nav-text">c++ 11 知识点总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1，constexpr-作用于函数声明，编译期推导返回常量"><span class="nav-number">1.1.</span> <span class="nav-text">1，constexpr 作用于函数声明，编译期推导返回常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，std-initializer-list"><span class="nav-number">1.2.</span> <span class="nav-text">2，std::initializer_list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3，统一初始化"><span class="nav-number">1.3.</span> <span class="nav-text">3，统一初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4，类型推导：auto-为了简化表示-如"><span class="nav-number">1.4.</span> <span class="nav-text">4，类型推导：auto,为了简化表示 如:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5，decltype类型推导，双层括号表引用"><span class="nav-number">1.5.</span> <span class="nav-text">5，decltype类型推导，双层括号表引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6，仿函数就是写个类，然后重载operator-，通过重载-运算符模拟函数形式的类"><span class="nav-number">1.6.</span> <span class="nav-text">6，仿函数就是写个类，然后重载operator()，通过重载()运算符模拟函数形式的类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7，lambda函数是为了简化表示临时的谓词函数，语法："><span class="nav-number">1.7.</span> <span class="nav-text">7，lambda函数是为了简化表示临时的谓词函数，语法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#捕捉列表参数意义"><span class="nav-number">1.7.1.</span> <span class="nav-text">捕捉列表参数意义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8，explicit-单个参数的构造函数不能进行隐式转换-A-a-5"><span class="nav-number">1.8.</span> <span class="nav-text">8，explicit 单个参数的构造函数不能进行隐式转换 A a = 5;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9，overload-override-overwrite区别"><span class="nav-number">1.9.</span> <span class="nav-text">9，overload override overwrite区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10，空指针类型nullptr取代NULL"><span class="nav-number">1.10.</span> <span class="nav-text">10，空指针类型nullptr取代NULL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11，enum-class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）"><span class="nav-number">1.11.</span> <span class="nav-text">11，enum class：不能与整数比较，类型显式指定，可以前置声明（因为可以确定大小）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12，-gt-gt-模板函数中可连写（必须带-以示区分，否则报错）"><span class="nav-number">1.12.</span> <span class="nav-text">12，&gt;&gt; 模板函数中可连写（必须带()以示区分，否则报错）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13，类模板是用来产生模板类的-class-template-gt-template-template-class-gt-class"><span class="nav-number">1.13.</span> <span class="nav-text">13，类模板是用来产生模板类的 class template -&gt; template , template class -&gt; class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14，using-当作-typedef-来处理一般类型和类模板的别名"><span class="nav-number">1.14.</span> <span class="nav-text">14，using 当作 typedef 来处理一般类型和类模板的别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15，变长参数模板"><span class="nav-number">1.15.</span> <span class="nav-text">15，变长参数模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16，新的字符串"><span class="nav-number">1.16.</span> <span class="nav-text">16，新的字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17，用户自定义的字面值"><span class="nav-number">1.17.</span> <span class="nav-text">17，用户自定义的字面值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18，多任务的支持："><span class="nav-number">1.18.</span> <span class="nav-text">18，多任务的支持：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19，default-delete"><span class="nav-number">1.19.</span> <span class="nav-text">19，default delete</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20，long-long-int，表示至少64bit的数"><span class="nav-number">1.20.</span> <span class="nav-text">20，long long int，表示至少64bit的数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21，允许sizeof操作符作用在类型的数据成员上，无须明确对象"><span class="nav-number">1.21.</span> <span class="nav-text">21，允许sizeof操作符作用在类型的数据成员上，无须明确对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22，线程相关："><span class="nav-number">1.22.</span> <span class="nav-text">22，线程相关：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23，tuple和erlang中的tuple类似"><span class="nav-number">1.23.</span> <span class="nav-text">23，tuple和erlang中的tuple类似</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24，share-ptr-weak-ptr"><span class="nav-number">1.24.</span> <span class="nav-text">24，share_ptr weak_ptr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25，随机数生成：三种算法，n种分布"><span class="nav-number">1.25.</span> <span class="nav-text">25，随机数生成：三种算法，n种分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26，std-ref和std-cref"><span class="nav-number">1.26.</span> <span class="nav-text">26，std::ref和std::cref</span></a></li></ol></li></ol></div>
             
 
           </div>
